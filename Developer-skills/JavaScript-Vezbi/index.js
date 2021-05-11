@@ -15,17 +15,39 @@
 // § Data 2: [12, 5, -5, 0, 4]
 // GOOD LUCK 😀
 
-var data1 = [17, 21, 23];
-var data2 = [12, 5, -5, 0, 4];
-const printForecast = (arr1, arr2) => {
-  let str = '';
-  let data3 = arr1.concat(arr2);
-  //   console.log(data3);
-  for (let i = 0; i < data3.length; i++) {
-    str += `${data3[i]}\xB0C in {i+1} days ... `;
-  }
-  console.log('...' + str);
-};
-printForecast(data1, data2);
+// var data1 = [17, 21, 23];
+// var data2 = [12, 5, -5, 0, 4];
+// const printForecast = (arr1, arr2) => {
+//   let str = '';
+//   let data3 = arr1.concat(arr2);
+//   //   console.log(data3);
+//   for (let i = 0; i < data3.length; i++) {
+//     str += `${data3[i]}\xB0C in {i+1} days ... `;
+//   }
+//   console.log('...' + str);
+// };
+// printForecast(data1, data2);
 
-// TODO
+//
+
+// console.log(add(2, 2));
+// console.log(addexp(2, 2));
+// console.log(addarr(2, 2));
+
+// function add(a, b) {
+//   return a + b;
+// }
+// const addexp = function (a, b) {
+//   return a + b;
+// };
+// const addarr = (a, b) => {
+//   return a + b;
+// };
+// console.log(card);
+
+// if (!card) deleteShopingCards();
+
+// var card = 10;
+// function deleteShopingCards() {
+//   console.log('All Cards is deleted');
+// }
