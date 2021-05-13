@@ -65,7 +65,6 @@
 
 // Destructuring array DONE
 // const restaurant = {
-
 //   name: 'pizza3',
 //   location: 'Gostivar',
 //   categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
@@ -86,7 +85,7 @@
 // const [starter, mainMenu] = restaurant.order(3, 2);
 // console.log(starter, mainMenu);
 
-// Nested Destructuring
+// // Nested Destructuring
 // let nest = [2, 4, [8, 10, [11, 12]]];
 // nest[1] = 5;
 // let [a, b, [c, d, [e, f]]] = nest;
@@ -161,7 +160,7 @@
 // } = hours; //hours become from desructured object restaurant like a value of properti openingHours
 // console.log(o, c);
 
-// Spread operators DONE
+// Spread operators and rest DONE
 // const restaurant = {
 //   name: 'pizza3',
 //   location: 'Gostivar',
@@ -198,6 +197,10 @@
 //       `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
 //     );
 //   },
+//   orderPizza: function (zadolzitelno, ...ostanato) {
+//     console.log(zadolzitelno);
+//     console.log(ostanato);
+//   },
 // };
 
 // restaurant.orderDelivery({
@@ -207,26 +210,28 @@
 //   starterIndex: 3,
 // });
 
-// // const ingredients = [
-// //   prompt('ingredient 1:'),
-// //   prompt('ingredient 2:'),
-// //   prompt('ingredient 3:'),
-// // ];
-// // console.log(ingredients);
-// // restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
-// // restaurant.orderPasta(...ingredients);
+// restaurant.orderPizza('mussrooms', 'ketchup', 'onion', 'olives');
 
-// // const arr = [1, 5, 9];
-// // const badNewArr = [22, 33, arr[0], arr[1], arr[2]];
-// // console.log(badNewArr);
-// // const newArr = [22, 33, ...arr];
-// // console.log(newArr);
-// // console.log(...newArr);
+// const ingredients = [
+//   prompt('ingredient 1:'),
+//   prompt('ingredient 2:'),
+//   prompt('ingredient 3:'),
+// ];
+// console.log(ingredients);
+// restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// restaurant.orderPasta(...ingredients);
 
-// // newArr[1] = 55;
-// // console.log(newArr);
+// const arr = [1, 5, 9];
+// const badNewArr = [22, 33, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+// const newArr = [22, 33, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
 
-// //Objects
+// newArr[1] = 55;
+// console.log(newArr);
+
+// Objects;
 // const newRestaurant = { yearOpen: 1992, ...restaurant, owner: 'Slavisha' };
 // console.log(newRestaurant);
 
@@ -234,3 +239,146 @@
 // restaurantCopy.name = 'Pizza-ITALIANO';
 // console.log(restaurantCopy.name);
 // console.log(restaurant.name);
+
+// // REST because is left side of =
+// const arr = [1, 5, 6];
+// const arr2 = [2, 5, ...arr];
+// console.log(arr2);
+// const [a, b, ...other] = [2, 5, 8, 9, 7, 20];
+// console.log(a, b, other);
+
+// Area;
+// const [italiana, , vegetarian, , ...otherMenu] = [
+//   ...restaurant.categories,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(italiana, vegetarian, otherMenu);
+// // Object
+// const { fri, ...otherDays } = { ...restaurant.openingHours };
+// console.log(otherDays);
+
+// // function
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   console.log(sum);
+// };
+
+// add(5, 7);
+// add(2, 6, 10);
+// const x = [1, 2, 3];
+// console.log(...x);
+// add(...x);
+
+// console.log(0);
+
+// restaurant.numGuest = 1;
+// const guset = restaurant.numGuest ?? 10;
+// console.log(guset);
+
+// TODO CODING
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// 1. Create one player array for each team (variables 'players1' and
+//    'players2')
+// const players1 = game.players[0];
+// const players2 = game.players[1];
+// const [players1,players2] = game.players
+// console.log(players1);
+// console.log(players2);
+//  2. The first player in any player array is the goalkeeper and the others are field
+//      players. For Bayern Munich (team 1) create one variable ('gk') with the
+//      goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10
+//      field players
+// const [[GK1, ...fieldPlayers1], [GK2, ...fieldPlayers2]] = [...game.players];
+// console.log('GK for Buyern: ', GK1, ' and fielsPlayers:', fieldPlayers1);
+// console.log('GK for : ', GK2, ' and fieldPlayers:', fieldPlayers2);
+//  3. Create an array 'allPlayers' containing all players of both teams (22
+//      players)
+// const allPlayers = [...game.players[0], ...game.players[1]];
+// console.log(allPlayers);
+//  4.  During the game, Bayern Munich (team 1) used 3 substitute players. So create a
+//      new array ('players1Final') containing all the original team1 players plus
+//      'Thiago', 'Coutinho' and 'Perisic'
+// const bayern = (game.team1 = game.players[0]);
+// const team1 = ['Thiago', 'Coutihno', 'Perisic', ...bayern];
+// console.log(team1);
+//  5. Based on the game.odds object, create one variable for each odd (called
+//      'team1', 'draw' and 'team2')
+// const {
+//   odds: { team1, x: draw, team2 },
+// } = game;
+// console.log(team1, draw, team2);
+//  6. Write a function ('printGoals') that receives an arbitrary number of player
+//      names (not an array) and prints each of them to the console, along with the
+//      number of goals that were scored in total (number of player names passed in)
+// const printGoals = function (...players) {
+//   console.log(players);
+//   console.log(`${players.length} goals was scored`);
+// };
+// printGoals(...game.scored);
+
+// const foundDuplicate = function (...players) {
+//   let counts = {};
+//   for (let i = 0; i < players.length; i++) {
+//     if (counts[players[i]]) {
+//       counts[players[i]] += 1;
+//     } else {
+//       counts[players[i]] = 1;
+//     }
+//   }
+//   for (let prop in counts) {
+//     if (counts[prop] >= 2) {
+//       console.log(prop + ' counted: ' + counts[prop] + ' times.');
+//     }
+//   }
+//   console.log(counts);
+// };
+
+// foundDuplicate(...game.scored);
+
+//  7.The team with the lower odd is more likely to win. Print to the console which
+//      team is more likely to win, without using an if/else statement or the ternary
+//      operator.
+// team1 < team2 ? console.log('team1 is better') : console.log('team2 is better');
