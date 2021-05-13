@@ -160,3 +160,77 @@
 //   fri: { open: o, close: c },
 // } = hours; //hours become from desructured object restaurant like a value of properti openingHours
 // console.log(o, c);
+
+// Spread operators DONE
+// const restaurant = {
+//   name: 'pizza3',
+//   location: 'Gostivar',
+//   categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruchetta', 'Grlic Bread', 'Capresa'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, //open 24hours
+//       close: 24,
+//     },
+//   },
+
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
+//     console.log(
+//       time,
+//       address,
+//       `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`
+//     );
+//   },
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(
+//       `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
+//     );
+//   },
+// };
+
+// restaurant.orderDelivery({
+//   time: '22:10',
+//   address: 'Beogradska bb',
+//   mainIndex: 1,
+//   starterIndex: 3,
+// });
+
+// // const ingredients = [
+// //   prompt('ingredient 1:'),
+// //   prompt('ingredient 2:'),
+// //   prompt('ingredient 3:'),
+// // ];
+// // console.log(ingredients);
+// // restaurant.orderPasta(ingredients[0], ingredients[1], ingredients[2]);
+// // restaurant.orderPasta(...ingredients);
+
+// // const arr = [1, 5, 9];
+// // const badNewArr = [22, 33, arr[0], arr[1], arr[2]];
+// // console.log(badNewArr);
+// // const newArr = [22, 33, ...arr];
+// // console.log(newArr);
+// // console.log(...newArr);
+
+// // newArr[1] = 55;
+// // console.log(newArr);
+
+// //Objects
+// const newRestaurant = { yearOpen: 1992, ...restaurant, owner: 'Slavisha' };
+// console.log(newRestaurant);
+
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = 'Pizza-ITALIANO';
+// console.log(restaurantCopy.name);
+// console.log(restaurant.name);
