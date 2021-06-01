@@ -144,7 +144,7 @@
 
 // // Default values
 // const { menu = [], starterMenu: start = [] } = restaurant;
-// console.log(menu, start);
+// console.log('eeee', menu, start);
 
 // // Mutating Variables
 // let a = 10;
@@ -231,7 +231,7 @@
 // newArr[1] = 55;
 // console.log(newArr);
 
-// Objects;
+// Objects DONE;
 // const newRestaurant = { yearOpen: 1992, ...restaurant, owner: 'Slavisha' };
 // console.log(newRestaurant);
 
@@ -240,7 +240,7 @@
 // console.log(restaurantCopy.name);
 // console.log(restaurant.name);
 
-// // REST because is left side of =
+// REST because is left side of = DONE
 // const arr = [1, 5, 6];
 // const arr2 = [2, 5, ...arr];
 // console.log(arr2);
@@ -257,7 +257,7 @@
 // const { fri, ...otherDays } = { ...restaurant.openingHours };
 // console.log(otherDays);
 
-// // function
+// function
 // const add = function (...numbers) {
 //   let sum = 0;
 //   for (let i = 0; i < numbers.length; i++) {
@@ -382,3 +382,187 @@
 //      team is more likely to win, without using an if/else statement or the ternary
 //      operator.
 // team1 < team2 ? console.log('team1 is better') : console.log('team2 is better');
+
+// HERE IS OBJECT OF RESTAURANT FOR SHORT HANDLE OF VIEW
+// TODO
+// const restaurant = {
+//   name: 'pizza3',
+//   location: 'Gostivar',
+//   categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruchetta', 'Grlic Bread', 'Capresa'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, //open 24hours
+//       close: 24,
+//     },
+//   },
+
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
+//     console.log(
+//       time,
+//       address,
+//       `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`
+//     );
+//   },
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(
+//       `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
+//     );
+//   },
+//   orderPizza: function (zadolzitelno, ...ostanato) {
+//     console.log(zadolzitelno);
+//     console.log(ostanato);
+//   },
+// };
+
+// Looping Array The FOR-OF loop DONE
+// const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+// console.log(menu);
+
+// for (let item of menu) console.log(item);
+
+// for (let item of menu.entries()) {
+//   console.log(item);
+// }
+// //with destructuring....
+
+// for (let [item, element] of menu.entries()) {
+//   console.log(`${item} : ${element}`);
+//   console.log(' indeks e:', item);
+// }
+
+// OPtional Chaining DONE
+// if (restaurant.openingHours.mon) {
+//   console.log(restaurant.openingHours.mon.open);
+// }
+// if (restaurant.openingHours && restaurant.openingHours.mon.open) {
+//   console.log(restaurant.openingHours.mon.open);
+// }
+// console.log(restaurant.openingHours.mon?.open);
+
+// Property NAMES DONE
+// for (let day of Object.keys(restaurant.openingHours)) {
+//   console.log(day);
+// }
+
+// const properties = Object.keys(restaurant.openingHours);
+// console.log(properties);
+
+// let openStr = `We are open ${properties.length} days: `;
+// for (let days of properties) {
+//   openStr += `${days}, `;
+// }
+// console.log(openStr);
+
+// // Propery VALUES DONE
+// const value = Object.values(restaurant.openingHours);
+// console.log(value);
+
+// // Entire Object DONE
+
+// const entries = Object.entries(restaurant.openingHours);
+// console.log(entries);
+
+// TODO chalange
+
+// #2 Let's continue with our football betting app! Keep using the 'game' variable from
+//before.
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// // 1. Loop over the game.scored array and print each player name to the console,
+// // along with the goal number (Example: "Goal 1: Lewandowski")
+// for (let [goal, score] of game.scored.entries()) {
+//   console.log(`goal ${goal + 1}: ${score}`);
+// }
+
+// // 2. Use a loop to calculate the average odd and log it to the console (We already
+// // studied how to calculate averages, you can go check if you don't remember)
+
+// const odds = Object.values(game.odds);
+// let avg = 0;
+// for (let odd of odds) {
+//   avg += odd;
+// }
+// console.log((avg /= odds.length));
+
+// // 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
+// // Odd of victory Bayern Munich: 1.33
+// // Odd of draw: 3.25
+// // Odd of victory Borrussia Dortmund: 6.5
+// // Get the team names directly from the game object, don't hardcode them
+// // (except for "draw"). Hint: Note how the odds and the game objects have the
+// // same property names 😉
+
+// for (let [t, value] of Object.entries(game.odds)) {
+//   const teamStr = t === 'x' ? 'draw' : `victory ${game[t]}`;
+//   console.log(`Odd of ${teamStr} ${value}`);
+// }
+
+// // 4. Bonus: Create an object called 'scorers' which contains the names of the
+// // players who scored as properties, and the number of goals as the value. In this
+// // game, it will look like this:
+// // {
+// // Gnarby: 1,
+// // Hummels: 1,
+// // Lewandowski: 2
+// // }
+// //
+
+// const uniqueCount = [...game.scored];
+// var scorers = {};
+// uniqueCount.forEach(function (i) {
+//   scorers[i] = (scorers[i] || 0) + 1;
+// });
+// console.log(scorers);
