@@ -760,3 +760,47 @@ const restaurant = {
 // console.log(new String('Slavisha'));
 // console.log(typeof new String('Slavisha'));
 // console.log(typeof new String('Slavisha').slice(1));
+
+// Continue working with strings DONE
+
+// const airline = 'TAP air Portugal';
+// console.log(airline.toLowerCase());
+// console.log(airline.toUpperCase());
+
+// //Fix capitalization name
+// const passenger = 'SlaVIshA';
+// const passengerLower = passenger.toLowerCase();
+// const passengerCorrect =
+//   passengerLower[0].toUpperCase() + passengerLower.slice(1);
+// console.log(passengerCorrect);
+
+// //Compairing Email
+// const email = 'slavisa@gmail.com';
+// const loginEmail = '  slavisa@gmail.com  ';
+
+// const lowerEmail = loginEmail.toLowerCase();
+// const trimedEmail = loginEmail.trim();
+// console.log(trimedEmail);
+
+// const normalEmail = loginEmail.toLowerCase().trim();
+// console.log(normalEmail);
+// console.log(normalEmail === trimedEmail);
+
+// //replacing
+// const priceGB = '567,54£';
+// const priceUS = priceGB.replace('£', '$').replace(',', '.');
+// console.log(priceUS);
+
+// const announcement = 'All passenger come to boarding door 23. Boarding door 23';
+// console.log(announcement.replace('door', 'gate'));
+// console.log(announcement.replaceAll('door', 'gate'));
+
+// //Boolean
+// const plane = 'Airbus A320neo';
+// console.log(plane.includes('A320'));
+// console.log(plane.includes('AA'));
+// console.log(plane.startsWith('Air'));
+
+// if (plane.startsWith('Air') && plane.endsWith('neo')) {
+//   console.log('Part of new airplane family');
+// }
