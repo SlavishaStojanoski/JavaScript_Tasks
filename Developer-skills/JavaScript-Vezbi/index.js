@@ -652,7 +652,7 @@ const restaurant = {
 // console.log([...question.keys()]);
 // console.log([...question.values()]);
 
-// Coding Challenge #3
+// Coding Challenge #3 TODO = DONE
 // Let's continue with our football betting app! This time, we have a map called
 // 'gameEvents' (see below) with a log of the events that happened during the
 // game. The values are the events themselves, and the keys are the minutes in which
@@ -719,3 +719,45 @@ const restaurant = {
 //   var half = min <= 45 ? 'First' : 'Second';
 //   console.log(`${half} Half ${min}: ${event}`);
 // }
+
+// Working with strings DONE
+// const airline = 'TAP air Portugal';
+// const plane = 'A320';
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log('B546'[0]);
+
+// console.log(airline.length);
+// console.log('B546'.length);
+
+// console.log(airline.indexOf('r'));
+// console.log(airline.lastIndexOf('r'));
+// console.log(airline.indexOf('portugal'));
+
+// console.log(airline.slice(4));
+// console.log(airline.slice(4, 7));
+
+// console.log(airline.slice(0, airline.indexOf(' ')));
+// console.log(airline.slice(airline.lastIndexOf(' ') + 1));
+
+// console.log(airline.slice(-2));
+// console.log(airline.slice(1, -1));
+
+// const chechMiddleSeat = (seat) => {
+//   const s = seat;
+//   if (s.slice(-1) === 'B' || s.slice(-1) === 'C') {
+//     console.log('You got a middle seat');
+//   } else {
+//     console.log('Lucky');
+//   }
+// };
+
+// chechMiddleSeat('11B');
+// chechMiddleSeat('22C');
+// chechMiddleSeat('21E');
+
+// console.log(new String('Slavisha'));
+// console.log(typeof new String('Slavisha'));
+// console.log(typeof new String('Slavisha').slice(1));
