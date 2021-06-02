@@ -385,47 +385,47 @@
 
 // HERE IS OBJECT OF RESTAURANT FOR SHORT HANDLE OF VIEW
 // TODO
-// const restaurant = {
-//   name: 'pizza3',
-//   location: 'Gostivar',
-//   categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
-//   starterMenu: ['Focaccia', 'Bruchetta', 'Grlic Bread', 'Capresa'],
-//   mainMenu: ['Pizza', 'Pasta', 'Risoto'],
-//   openingHours: {
-//     thu: {
-//       open: 12,
-//       close: 22,
-//     },
-//     fri: {
-//       open: 11,
-//       close: 23,
-//     },
-//     sat: {
-//       open: 0, //open 24hours
-//       close: 24,
-//     },
-//   },
+const restaurant = {
+  name: 'pizza3',
+  location: 'Gostivar',
+  categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
+  starterMenu: ['Focaccia', 'Bruchetta', 'Grlic Bread', 'Capresa'],
+  mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, //open 24hours
+      close: 24,
+    },
+  },
 
-//   order: function (starterIndex, mainIndex) {
-//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-//   },
-//   orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
-//     console.log(
-//       time,
-//       address,
-//       `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`
-//     );
-//   },
-//   orderPasta: function (ing1, ing2, ing3) {
-//     console.log(
-//       `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
-//     );
-//   },
-//   orderPizza: function (zadolzitelno, ...ostanato) {
-//     console.log(zadolzitelno);
-//     console.log(ostanato);
-//   },
-// };
+  order: function (starterIndex, mainIndex) {
+    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+  },
+  orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
+    console.log(
+      time,
+      address,
+      `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`
+    );
+  },
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
+    );
+  },
+  orderPizza: function (zadolzitelno, ...ostanato) {
+    console.log(zadolzitelno);
+    console.log(ostanato);
+  },
+};
 
 // Looping Array The FOR-OF loop DONE
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -566,3 +566,156 @@
 //   scorers[i] = (scorers[i] || 0) + 1;
 // });
 // console.log(scorers);
+
+// SETS DONE
+// const ordersSet = new Set(['pizza', 'pasta', 'pizza', 'risotto', 'pizza']);
+// console.log(ordersSet);
+
+// console.log(new Set('Slavisha'));
+// console.log(ordersSet.size);
+// console.log(ordersSet.has('pizza'));
+// console.log(ordersSet.has('bread'));
+// ordersSet.add('Bread');
+// ordersSet.add('Bread');
+// ordersSet.delete('pizza');
+
+// console.log(ordersSet);
+
+// MAP DONE
+// const rest = new Map();
+// rest.set('name', 'Forza Italy');
+// rest.set(1, 'Baern M.');
+// rest.set(2, 'Juventus');
+// console.log(rest);
+
+// rest
+//   .set('categories', ['pizza', 'pasta', 'vegetarian', 'organic'])
+//   .set('open', 11)
+//   .set('close', 23)
+//   .set(true, 'We are open :D')
+//   .set(false, 'We are close :(');
+
+// console.log(rest.get('name'));
+// console.log(rest.get(true));
+// console.log(rest.get(1));
+
+// const time = 8;
+// console.log(rest.get(time > rest.get('open') && time < rest.get('close')));
+
+// console.log(rest.has('categories'));
+
+// const arr = [1, 2];
+// rest.set(arr, 'test');
+// console.log(rest);
+// console.log(rest.size);
+
+// console.log(rest.get(arr));
+
+// const question = new Map([
+//   ['question', 'What is the best programming language in the world'],
+//   [1, 'C'],
+//   [2, 'Java'],
+//   [3, 'JavaScript'],
+//   ['Correct', 3],
+//   [true, 'Correct'],
+//   [false, 'Try Again'],
+// ]);
+
+// console.log(question);
+
+// // COnvert Object to Map
+// console.log(Object.entries(restaurant.openingHours));
+// const hoursMap = new Map(Object.entries(restaurant.openingHours));
+// console.log(hoursMap);
+
+// console.log(question.get('question'));
+// for (let [key, value] of question) {
+//   if (typeof key === 'number') {
+//     console.log(`Answer ${key} : ${value}`);
+//   }
+// }
+
+// // const answer = Number(prompt('Your Answer'));
+// // console.log(answer);
+
+// // Solution by FROM ME
+// // console.log(
+// //   question.get('Correct') === answer ? question.get(true) : question.get(false)
+// // );
+
+// // Solution by course :D
+// // console.log(question.get(question.get('Correct') === answer));
+
+// // Conver Map to Array
+// console.log([...question]);
+// console.log(question.entries());
+// console.log([...question.keys()]);
+// console.log([...question.values()]);
+
+// Coding Challenge #3
+// Let's continue with our football betting app! This time, we have a map called
+// 'gameEvents' (see below) with a log of the events that happened during the
+// game. The values are the events themselves, and the keys are the minutes in which
+// each event happened (a football game has 90 minutes plus some extra time).
+// Your tasks:
+// 1. Create an array 'events' of the different game events that happened (no
+// duplicates)
+// 2. After the game has finished, is was found that the yellow card from minute 64
+// was unfair. So remove this event from the game events log.
+// 3. Compute and log the following string to the console: "An event happened, on
+// average, every 9 minutes" (keep in mind that a game has 90 minutes)
+// 4. Loop over 'gameEvents' and log each element to the console, marking
+// whether it's in the first half or second half (after 45 min) of the game, like this:
+// [FIRST HALF] 17:
+// ⚽
+// GOAL
+// GOOD LUCK 😀
+
+// const gameEvents = new Map([
+//   [17, '⚽ GOAL'],
+//   [36, '🔁 Substitution'],
+//   [47, '⚽ GOAL'],
+//   [61, '🔁 Substitution'],
+//   [64, '🔶 Yellow card'],
+//   [69, '🔴 Red card'],
+//   [70, '🔁 Substitution'],
+//   [72, '🔁 Substitution'],
+//   [76, '⚽ GOAL'],
+//   [80, '⚽ GOAL'],
+//   [92, '🔶 Yellow card'],
+// ]);
+
+// // 1. Create an array 'events' of the different game events that happened (no
+// // duplicates)
+
+// const arrayEvents = new Set(gameEvents.values());
+// console.log(arrayEvents);
+
+// // 2. After the game has finished, is was found that the yellow card from minute 64
+// // was unfair. So remove this event from the game events log.
+
+// gameEvents.delete(64);
+// console.log(gameEvents);
+
+// // 3. Compute and log the following string to the console: "An event happened, on
+// // average, every 9 minutes" (keep in mind that a game has 90 minutes)
+
+// console.log(
+//   `An event happened, on average, every ${90 / gameEvents.size} minutes `
+// );
+// const time = [...gameEvents.keys()].pop();
+// console.log(time);
+// console.log(
+//   `An event happened, on average, every ${time / gameEvents.size} minutes `
+// );
+
+// // 4. Loop over 'gameEvents' and log each element to the console, marking
+// // whether it's in the first half or second half (after 45 min) of the game, like this:
+// // [FIRST HALF] 17:
+// // ⚽
+// // GOAL
+
+// for (let [min, event] of gameEvents) {
+//   var half = min <= 45 ? 'First' : 'Second';
+//   console.log(`${half} Half ${min}: ${event}`);
+// }
