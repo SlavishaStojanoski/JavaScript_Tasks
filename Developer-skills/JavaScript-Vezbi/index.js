@@ -753,7 +753,6 @@ const restaurant = {
 //     console.log('Lucky');
 //   }
 // };
-
 // chechMiddleSeat('11B');
 // chechMiddleSeat('22C');
 // chechMiddleSeat('21E');
