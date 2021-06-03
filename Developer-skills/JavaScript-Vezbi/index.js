@@ -774,7 +774,7 @@ const restaurant = {
 //   passengerLower[0].toUpperCase() + passengerLower.slice(1);
 // console.log(passengerCorrect);
 
-// //Compairing Email
+//Compairing Email
 // const email = 'slavisa@gmail.com';
 // const loginEmail = '  slavisa@gmail.com  ';
 
@@ -804,3 +804,99 @@ const restaurant = {
 // if (plane.startsWith('Air') && plane.endsWith('neo')) {
 //   console.log('Part of new airplane family');
 // }
+
+// COntinue working with strings DONE
+//Split and Join
+
+// console.log('a+very+nice+string'.split('+'));
+// console.log('Slvaisha Stojanoski'.split(' '));
+
+// const [firstName, lastName] = 'Slavisha Stojanoski'.split(' ');
+
+// const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+// console.log(newName);
+
+// const capitalizeName = function (name) {
+//   let names = name.split(' ');
+//   // console.log(names);
+//   let namesUpper = [];
+//   for (let n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join(' '));
+// };
+
+// capitalizeName('ana madona jenifer jack');
+// capitalizeName('slavisha stojanoski');
+
+//Padding
+// const message = 'Go to gate 20';
+// console.log(message.padStart(10, '+').padEnd(20, '+'));
+// console.log('Slavisha'.padStart(10, '+').padEnd(20, '+'));
+
+// const maskCreditCard = (cardNo) => {
+//   const card = cardNo + '';
+//   const lastDig = card.slice(-4);
+//   return lastDig.padStart(card.length, '*');
+// };
+
+// console.log(maskCreditCard(1542154215855242));
+// console.log(maskCreditCard(15411154152));
+// console.log(maskCreditCard('15411154152124124124'));
+
+//Repead
+// const warningMessage = 'The weather is bad ... All Departues is delayed';
+// console.log(warningMessage.repeat(5));
+
+// const planeInLine = (n) => {
+//   console.log(`There are ${n} planes in line`);
+// };
+
+// planeInLine(5);
+
+// Coding Challenge #4 TODO DONE
+// Write a program that receives a list of variable names written in underscore_case
+// and convert them to camelCase.
+// The input will come from a textarea inserted into the DOM (see code below to
+// insert the elements), and conversion will happen when the button is pressed.
+// Test data (pasted to textarea, including spaces):
+// underscore_case
+// first_name
+// Some_Variable
+// calculate_AGE
+// delayed_departure
+// Should produce this output (5 separate console.log outputs):
+// underscoreCase ✅
+// firstName ✅✅
+// someVariable ✅✅✅
+// calculateAge ✅✅✅✅
+// delayedDeparture ✅✅✅✅✅
+// Hints:
+// § Remember which character defines a new line in the textarea 😉
+// § The solution only needs to work for a variable made out of 2 words, like a_b
+// § Start without worrying about the ✅. Tackle that only after you have the variable
+// name conversion working 😉
+// § This challenge is difficult on purpose, so start watching the solution in case
+// you're stuck. Then pause and continue!
+// Afterwards, test with your own test data!
+// GOOD LUCK 😀
+
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+
+// document.querySelector('button').addEventListener('click', function () {
+//   const text = document.querySelector('textarea').value;
+//   const str = text.split('\n');
+//   console.log(str);
+
+//   for (let [i, n] of str.entries()) {
+//     const [first, second] = n.toLowerCase().trim().split('_');
+//     // console.log(first, second);
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+//   }
+// });
