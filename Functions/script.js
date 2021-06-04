@@ -211,7 +211,7 @@
 
 // -------------------------------------------END-------------------------------------------------//
 
-// # Chalange TODO
+// # Chalange TODO = DONE
 // Let's build a simple poll app!
 // A poll has a question, an array of options from which people can choose, and an
 // array with the number of replies for each option. This data is stored in the starter
@@ -287,3 +287,104 @@ document
 //  [1, 5, 3, 9, 6, 1]
 // poll.displayResults.call({ answers: [5, 2, 3] }, 'string');
 // poll.displayResults.call({ answers: [1, 5, 3, 9, 6, 1] });
+
+// -------------------------------------------END-------------------------------------------------//
+
+// NEW
+// Immediately Invoked Function Expressions (IIFE)
+
+// (function () {
+//   console.log('This string executed just once');
+// })();
+
+// (() => console.log('And this arrow fun ex.. once'))();
+
+// {
+//   const private = 55;
+//   let private = 15;
+//   var notPrivate = 20;
+// }
+// // console.log(private);
+// console.log(notPrivate);
+
+// -------------------------------------------END-------------------------------------------------//
+
+// NEW
+// Closures
+// const secureBooking = function () {
+//   let passengers = 0;
+//   return function () {
+//     passengers++;
+//     console.log(`${passengers} passengers`);
+//   };
+// };
+
+// const booker = secureBooking();
+
+// booker();
+// booker();
+// booker();
+
+// console.dir(booker);
+
+// More Closure examples
+
+// Example 1
+// let f;
+
+// const g = function () {
+//   const a = 20;
+//   f = function () {
+//     console.log(a * 2);
+//   };
+// };
+
+// const h = function () {
+//   const b = 120;
+//   f = function () {
+//     console.log(b * 2);
+//   };
+// };
+
+// g();
+// f();
+
+// h();
+// f();
+
+// // Example 2
+// const boardPassengers = function (n, wait) {
+//   const perGroup = n / 3;
+//   setTimeout(function () {
+//     console.log(`We are now boarding all ${n} passengers`);
+//     console.log(`There a 3 groups, each with ${perGroup} passengers`);
+//   }, wait * 1000);
+//   console.log(`Boarding will start in ${wait} seconds`);
+// };
+
+// boardPassengers(180, 4);
+
+// -------------------------------------------END-------------------------------------------------//
+
+//Chalange TODO = DONE
+/*
+This is more of a thinking challenge than a coding challenge 🤓
+Your tasks:
+1. Take the IIFE below and at the end of the function, attach an event listener that
+changes the color of the selected h1 element ('header') to blue, each time
+the body element is clicked. Do not select the h1 element again!
+2. And now explain to yourself (or someone around you) why this worked! Take all
+the time you need. Think about when exactly the callback function is executed,
+and what that means for the variables involved in this example.
+*/
+
+// (function () {
+//   const header = document.querySelector('h1');
+//   header.style.color = 'red';
+
+//   document.querySelector('body').addEventListener('click', function () {
+//     header.style.color = 'blue';
+//   });
+// })();
+
+// -------------------------------------------END-------------------------------------------------//
