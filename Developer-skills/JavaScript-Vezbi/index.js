@@ -385,47 +385,47 @@
 
 // HERE IS OBJECT OF RESTAURANT FOR SHORT HANDLE OF VIEW
 // TODO
-const restaurant = {
-  name: 'pizza3',
-  location: 'Gostivar',
-  categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
-  starterMenu: ['Focaccia', 'Bruchetta', 'Grlic Bread', 'Capresa'],
-  mainMenu: ['Pizza', 'Pasta', 'Risoto'],
-  openingHours: {
-    thu: {
-      open: 12,
-      close: 22,
-    },
-    fri: {
-      open: 11,
-      close: 23,
-    },
-    sat: {
-      open: 0, //open 24hours
-      close: 24,
-    },
-  },
+// const restaurant = {
+//   name: 'pizza3',
+//   location: 'Gostivar',
+//   categories: ['Italiana', 'Pizzeria', 'Vegetarian', 'Organic'],
+//   starterMenu: ['Focaccia', 'Bruchetta', 'Grlic Bread', 'Capresa'],
+//   mainMenu: ['Pizza', 'Pasta', 'Risoto'],
+//   openingHours: {
+//     thu: {
+//       open: 12,
+//       close: 22,
+//     },
+//     fri: {
+//       open: 11,
+//       close: 23,
+//     },
+//     sat: {
+//       open: 0, //open 24hours
+//       close: 24,
+//     },
+//   },
 
-  order: function (starterIndex, mainIndex) {
-    return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
-  },
-  orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
-    console.log(
-      time,
-      address,
-      `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`
-    );
-  },
-  orderPasta: function (ing1, ing2, ing3) {
-    console.log(
-      `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
-    );
-  },
-  orderPizza: function (zadolzitelno, ...ostanato) {
-    console.log(zadolzitelno);
-    console.log(ostanato);
-  },
-};
+//   order: function (starterIndex, mainIndex) {
+//     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
+//   },
+//   orderDelivery: function ({ time, address, starterIndex, mainIndex }) {
+//     console.log(
+//       time,
+//       address,
+//       `${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`
+//     );
+//   },
+//   orderPasta: function (ing1, ing2, ing3) {
+//     console.log(
+//       `your\'s pasta is with this ingredients: ${ing1} ${ing2} ${ing3}`
+//     );
+//   },
+//   orderPizza: function (zadolzitelno, ...ostanato) {
+//     console.log(zadolzitelno);
+//     console.log(ostanato);
+//   },
+// };
 
 // Looping Array The FOR-OF loop DONE
 // const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
@@ -900,3 +900,6 @@ const restaurant = {
 //     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
 //   }
 // });
+
+// ------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------
