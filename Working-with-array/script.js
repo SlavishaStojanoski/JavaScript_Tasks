@@ -4,7 +4,7 @@
 /////////////////////////////////////////////////
 // BANKIST APP
 
-// Data
+// // Data
 const account1 = {
   owner: 'Jonas Schmedtmann',
   movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
@@ -78,3 +78,11 @@ const dispalyMovements = function (movements) {
   });
 };
 dispalyMovements(account1.movements);
+
+// Current Balance
+const displayBalance = function (movements) {
+  const balance = movements.reduce((acc, cur) => acc + cur, 0);
+  labelBalance.textContent = `${balance} Eur`;
+};
+
+displayBalance(account1.movements);
