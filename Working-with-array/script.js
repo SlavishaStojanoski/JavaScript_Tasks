@@ -71,7 +71,7 @@ const dispalyMovements = function (movements) {
       ${i + 1} ${type}
       </div>
         <div class="movements__date">3 days ago</div>
-      <div class="movements__value">${mov}</div>
+      <div class="movements__value">${mov} €</div>
     </div>
   `;
     containerMovements.insertAdjacentHTML('afterbegin', html);
@@ -82,7 +82,31 @@ dispalyMovements(account1.movements);
 // Current Balance
 const displayBalance = function (movements) {
   const balance = movements.reduce((acc, cur) => acc + cur, 0);
-  labelBalance.textContent = `${balance} Eur`;
+  labelBalance.textContent = `${balance} €`;
 };
 
 displayBalance(account1.movements);
+
+// Dispaing balance in out and interest
+const calcDisppaySummary = function (movements) {
+  const incomes = movements
+    .filter((mov) => mov > 0)
+    .reduce((acc, mov) => acc + mov);
+  labelSumIn.textContent = `${incomes} €`;
+
+  const out = movements
+    .filter((mov) => mov < 0)
+    .reduce((acc, mov) => acc + mov);
+  labelSumOut.textContent = `${Math.abs(out)} €`;
+
+  const interest = movements
+    .filter((mov) => mov > 0)
+    .map((deposite) => (deposite * 1.2) / 100)
+    .filter((int, i, arr) => {
+      // console.log(arr);
+      return int > 1;
+    })
+    .reduce((acc, int) => acc + int, 0);
+  labelSumInterest.textContent = `${interest} €`;
+};
+calcDisppaySummary(account1.movements);

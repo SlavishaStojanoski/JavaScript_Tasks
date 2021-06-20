@@ -8,7 +8,7 @@
 //   ['GBP', 'Pound sterling'],
 // ]);
 
-// const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
 
@@ -283,7 +283,7 @@
 // -------------------------------------------END-------------------------------------------------//
 
 // NEW
-// Challenge #2
+// Challenge #2 TODO = DONE
 // Let's go back to Julia and Kate's study about dogs. This time, they want to convert
 // dog ages to human ages and calculate the average age of the dogs in their study.
 // Your tasks:
@@ -323,3 +323,39 @@
 
 // average(Data1);
 // average(Data2);
+
+// -------------------------------------------END-------------------------------------------------//
+
+// NEW
+// The Magic of Chaining Methods
+// const euroToUsd = 1.1;
+// const totalDepositeUSD = movements
+//   .filter((mov) => mov > 0)
+//   .map((mov, i, arr) => {
+//     // console.log(arr);
+//     return mov * euroToUsd;
+//   })
+//   .reduce((acc, mov, i, arr) => acc + mov);
+
+// console.log(totalDepositeUSD);
+
+// -------------------------------------------END-------------------------------------------------//
+
+// NEW
+// Challange #3 TODO = DONE
+// Rewrite the 'calcAverageHumanAge' function from Challenge #2, but this time
+// as an arrow function, and using chaining!
+// Test data:
+// § Data 1: [5, 2, 4, 1, 15, 8, 3]
+// § Data 2: [16, 6, 10, 5, 6, 1, 4]
+// GOOD LUCK 😀
+
+// const calcAverageHumanAge = (ages) => {
+//   const humanAge = ages
+//     .map((age) => (age <= 2 ? 2 * age : 16 + age * 4))
+//     .filter((age) => age >= 18)
+//     .reduce((acc, age, i, arr) => acc + age / arr.length, 0);
+//   console.log(humanAge);
+// };
+
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
