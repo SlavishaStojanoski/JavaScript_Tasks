@@ -359,3 +359,45 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 // };
 
 // calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+
+// -------------------------------------------END-------------------------------------------------//
+
+// NEW
+// The find Method
+// const firtsWithdrawal = movements.find((mov) => mov < 0);
+// console.log(movements);
+// console.log(firtsWithdrawal);
+
+// const acount = accounts.find((acc) => acc.owner === 'Jessica Davis');
+// console.log(acount);
+
+// -------------------------------------------END-------------------------------------------------//
+
+//NEW
+// some and every
+// console.log(movements);
+// //  EQUALITT
+// console.log(movements.includes(-130));
+
+// // SOME: CONDITION
+// const anyDeposits = movements.some((mov) => mov > 0);
+// console.log(anyDeposits);
+
+// // EVERY
+// const everyDeposit = movements.every((mov) => mov > 0);
+// console.log(everyDeposit);
+
+// const xx = movements.filter((map) => map > 0);
+// console.log(xx);
+
+// console.log(xx.every((x) => x > 0));
+
+// // Separate callback
+// const deposit = (mov) => mov > 0;
+// console.log(movements.some(deposit));
+// console.log(movements.every(deposit));
+// console.log(movements.filter(deposit));
+
+// -------------------------------------------END-------------------------------------------------//
+
+//NEW
