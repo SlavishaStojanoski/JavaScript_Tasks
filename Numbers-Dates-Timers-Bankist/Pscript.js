@@ -172,37 +172,32 @@
 //-----------------------------------------------------END--------------------------------------------------
 
 // NEW
+// Operations with Dates
+// const future = new Date(2037, 10, 19, 15, 23);
+// console.log(+future);
 
-function smooth(elements, integerList) {
-  var i;
-  var previous;
-  var result = true;
+// const calcDaysPassed = (date1, date2) =>
+//   Math.abs(date2 - date1) / (1000 * 60 * 60 * 24);
 
-  previous = parseInt(integerList[0]);
-  for (i = 0; i < elements; i++) {
-    num = parseInt(integerList[i]);
-    if (Math.abs(num - previous) > 1) {
-      result = false;
-      break;
-    }
-    previous = num;
-  }
+// const days1 = calcDaysPassed(new Date(2037, 3, 14), new Date(2037, 3, 4));
+// console.log(days1);
 
-  return result;
-}
+//-----------------------------------------------------END--------------------------------------------------
 
-function wrapper() {
-  var n;
-  var myArray;
-  n = document.myform.elements.value;
-  elements = parseInt(n);
-  console.log(elements);
-  integers = document.myform.integers.value;
-  console.log(integers);
-  myArray = integers.split(' ');
-  if (smooth(elements, myArray)) {
-    alert('YES');
-  } else {
-    alert('NO');
-  }
-}
+// NEW
+// Internationalizing Numbers (Intl)
+// const num = 161561513.155;
+// const option = {
+//   style: 'currency',
+//   unit: 'celsius',
+//   currency: 'EUR',
+//   // useGrouping: false,
+// };
+
+// console.log('US', new Intl.NumberFormat('en-US', option).format(num));
+// console.log('Germany:', new Intl.NumberFormat('de-DE', option).format(num));
+// console.log('Syria:', new Intl.NumberFormat('ar-SY', option).format(num));
+// console.log(
+//   navigator.language,
+//   new Intl.NumberFormat(navigator.language, option).format(num)
+// );
