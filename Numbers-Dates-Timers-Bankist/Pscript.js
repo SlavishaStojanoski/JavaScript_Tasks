@@ -201,3 +201,7 @@
 //   navigator.language,
 //   new Intl.NumberFormat(navigator.language, option).format(num)
 // );
+
+//-----------------------------------------------------END--------------------------------------------------
+
+// NEW
