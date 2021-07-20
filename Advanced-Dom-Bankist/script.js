@@ -2,13 +2,19 @@
 
 ///////////////////////////////////////
 // Modal window
-
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.btn--close-modal');
 const btnsOpenModal = document.querySelectorAll('.btn--show-modal');
+
+// Variables to make scrolling
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
+
+// Tabbed Components
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
 
 const openModal = function (e) {
   e.preventDefault();
@@ -45,4 +51,9 @@ btnScrollTo.addEventListener('click', function (e) {
 // // 2.Determine what element originate the element
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   navBarScroll(e); // function is in scrool.js file
+});
+
+// Tabbed Components on section--2
+tabsContainer.addEventListener('click', function (e) {
+  BuildingTabbedComponents(e);
 });

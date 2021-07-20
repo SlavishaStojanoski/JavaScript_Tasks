@@ -54,7 +54,7 @@ function scrolling(e) {
 // // 2.Determine what element originate the element
 const navBarScroll = (e) => {
   e.preventDefault();
-  console.log(e.target);
+  // console.log(e.target);
 
   //Matching strategy
   if (e.target.classList.contains('nav__link')) {
