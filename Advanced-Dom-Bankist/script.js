@@ -16,6 +16,10 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 
+//Navigation bar
+const nav = document.querySelector('.nav');
+
+//NEW MODAL
 const openModal = function (e) {
   e.preventDefault();
   modal.classList.remove('hidden');
@@ -41,19 +45,34 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-//Scroll down on read more btn
+//NEW Scroll down on read more btn
 btnScrollTo.addEventListener('click', function (e) {
   scrolling(e); // function is in scrool.js file
 });
 
-//Smoothy scroll on navigation bar (page Navigation)
+// NEW Smoothy scroll on navigation bar (page Navigation)
 // // 1.Add Event listener to common parent element
 // // 2.Determine what element originate the element
 document.querySelector('.nav__links').addEventListener('click', function (e) {
   navBarScroll(e); // function is in scrool.js file
 });
 
-// Tabbed Components on section--2
+//NEW Tabbed Components on section--2
 tabsContainer.addEventListener('click', function (e) {
   BuildingTabbedComponents(e);
 });
+
+//NEW Menu fade animation
+nav.addEventListener(
+  'mouseover',
+  handleHover.bind(0.5) //Function handleHover is in menufadeanim.js file
+);
+nav.addEventListener(
+  'mouseout',
+  handleHover.bind(1) //Function handleHover is in menufadeanim.js file
+);
+
+//NEW Implementing a sticky nvigation; the scroll event
+// All Code is still in javaScript/stickyNav.js file
+
+//NEW REVEALING elemnts in scroll
