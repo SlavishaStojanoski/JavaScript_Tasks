@@ -26,6 +26,14 @@ console.log(matilda, sara);
 
 console.log(Slavisha instanceof Person);
 
+//NEW Static method
+Person.hey = function () {
+  console.log('hi ');
+  console.log(this);
+};
+
+Person.hey();
+
 //NEW PROTOTYPES
 console.log(Person.prototype);
 
@@ -72,7 +80,7 @@ console.log(arr.unique());
 const h1 = document.querySelector('h1');
 console.dir((x) => x + 1);
 
-// Your tasks:
+// Your tasks: DONE
 // 1. Use a constructor function to implement a 'Car'. A car has a 'make' and a
 // 'speed' property. The 'speed' property is the current speed of the car in
 // km/h
